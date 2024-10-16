@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
 }
 
 body{
@@ -29,12 +31,15 @@ header{
 .title h1{
     align-self: center;
     font-size: 2.5rem;
+    word-spacing: -12px;
 }
 
 .title li{
     align-self: center;
     list-style-type: none;
     margin-top: 20px;
+    font-size: 1.2rem;
+    word-spacing: -5px;
 }
 
 .searchBar{
