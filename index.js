@@ -10,5 +10,5 @@ fetch ("http://www.omdbapi.com/?t=star+wars&type=movie&apikey=7a4561cc")
 srcBtn.addEventListener('click', function(){
     fetch (`http://www.omdbapi.com/?s=${titleImput.value}&type=movie&apikey=7a4561cc`)
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data => console.log(data.Search))
 })
