@@ -19,7 +19,7 @@ srcBtn.addEventListener('click', function(){
             console.log("No movie with this title. try again!")
         } else{
             console.log(movieListArray)
-            movieListArray.filter(listMovieFilter(movie))
+            //movieListArray.filter(listMovieFilter(movie))
         }
     })
     function listMovieFilter (movie){
@@ -29,4 +29,4 @@ srcBtn.addEventListener('click', function(){
     
 })
 
-
+//creare un altro fetch, che lavora su ogni singolo titolo attraverso il Filter.
