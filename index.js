@@ -11,17 +11,22 @@ srcBtn.addEventListener('click', function(){
     fetch (`http://www.omdbapi.com/?s=${titleImput.value}&type=movie&apikey=7a4561cc`)
     .then(res => res.json())
     .then(data => {
-        //console.log(data.Response)
+
         const movieListArray = data.Search
-        //console.log(movieListArray)
+        let movieList = ""
+        
         if(data.Response === 'False'){
             console.log("No movie with this title. try again!")
         } else{
             console.log(movieListArray)
-            let movieList = ""
-            movieListArray.filter(movie =>{
-                movieList += ``
-            })
+            movieListArray.filter(listMovieFilter(movie))
         }
     })
+    function listMovieFilter (movie){
+        movieList += ``
+        console.log('working')
+    }
+    
 })
+
+
