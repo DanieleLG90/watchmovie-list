@@ -9,7 +9,7 @@ fetch ("http://www.omdbapi.com/?t=star+wars&type=movie&apikey=7a4561cc")
 */
 
 srcBtn.addEventListener('click', function(){
-    fetch (`http://www.omdbapi.com/?s=${titleImput.value}&type=movie&apikey=7a4561cc`)
+    fetch (`https://www.omdbapi.com/?s=${titleImput.value}&type=movie&apikey=7a4561cc`)
     .then(res => res.json())
     .then(data => {
 
@@ -22,7 +22,7 @@ srcBtn.addEventListener('click', function(){
             //console.log(movieListArray)
             let movieList =''
             movieListArray.forEach(movie =>{
-                fetch(`http://www.omdbapi.com/?t=${movie.Title}&type=movie&apikey=7a4561cc`)
+                fetch(`https://www.omdbapi.com/?t=${movie.Title}&type=movie&apikey=7a4561cc`)
                     .then(res => res.json())
                     .then(data =>{
                         movieList += `<img src="${movie.Poster}" alt="">`
