@@ -19,11 +19,20 @@ srcBtn.addEventListener('click', function(){
             list.textContent = "No movie with this title. try again!"
             //console.log("No movie with this title. try again!")
         } else{
-            console.log(movieListArray)        
+            //console.log(movieListArray)
+            let movieList =''
+            movieListArray.forEach(movie =>{
+                fetch(`http://www.omdbapi.com/?t=${movie.Title}&type=movie&apikey=7a4561cc`)
+                    .then(res => res.json())
+                    .then(data =>{
+                        movieList += `<img src="${movie.Poster}" alt="">`
+                        list.innerHTML = movieList
+                    
+                    }) 
+            })
+            
         }
     })
-    
-   
 })
 
 //creare un altro fetch, che lavora su ogni singolo titolo attraverso il Filter.
