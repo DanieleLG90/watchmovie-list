@@ -19,23 +19,7 @@ srcBtn.addEventListener('click', function(){
             list.textContent = "No movie with this title. try again!"
             //console.log("No movie with this title. try again!")
         } else{
-            //console.log(movieListArray)
-            
-           movieListArray.filter(movie => {
-
-
-                return fetch(`http://www.omdbapi.com/?t=${movie.Title}&type=movie&apikey=7a4561cc`)
-                    .then(res => res.json())
-                    .then(data => {
-                        //console.log(data)
-                        let movieList = ""
-                        movieList += `<img src="${movie.Poster}" alt="movie poster">`
-                        console.log(movieList)
-                        list.innerHTML = movieList
-                    }) 
-            })
-
-        
+            console.log(movieListArray)        
         }
     })
     
