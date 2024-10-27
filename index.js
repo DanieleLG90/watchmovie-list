@@ -25,7 +25,25 @@ srcBtn.addEventListener('click', function(){
                 fetch(`https://www.omdbapi.com/?t=${movie.Title}&type=movie&apikey=7a4561cc`)
                     .then(res => res.json())
                     .then(data =>{
-                        movieList += `<img src="${movie.Poster}" alt="">`
+                        console.log(data)
+                        /*
+                        movieList += `  
+                                <div class="movieCard">
+                                    <img class="moviePOster" src="${movie.}" alt="movie Poster">
+                                    <div>
+                                        <div class="movieInfo1">
+                                            <h2 class="movieTitle">Movie title${movie.}</h2>
+                                            <h3 class="movieRate">rate${movie.}</h3>
+                                        </div>
+                                        <div class="movieInfo2">
+                                            <span class="movieDuration">duration${movie.}</span>
+                                            <span class="movieType">movie type${movie.}</span>
+                                            <button class="addBtn">add to watch</button>
+                                        </div>
+                                        <p>plot${movie.}</p>
+                                    </div>
+                                </div>`
+                                */
                         list.innerHTML = movieList
                     
                     }) 
