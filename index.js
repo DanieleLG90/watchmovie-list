@@ -26,24 +26,24 @@ srcBtn.addEventListener('click', function(){
                     .then(res => res.json())
                     .then(data =>{
                         console.log(data)
-                        /*
+                        
                         movieList += `  
                                 <div class="movieCard">
-                                    <img class="moviePOster" src="${movie.}" alt="movie Poster">
+                                    <img class="moviePOster" src="${movie.Poster}" alt="movie Poster">
                                     <div>
                                         <div class="movieInfo1">
-                                            <h2 class="movieTitle">Movie title${movie.}</h2>
-                                            <h3 class="movieRate">rate${movie.}</h3>
+                                            <h2 class="movieTitle">${movie.Title}</h2>
+                                            <h3 class="movieRate">${data.imdbRating}</h3>
                                         </div>
                                         <div class="movieInfo2">
-                                            <span class="movieDuration">duration${movie.}</span>
-                                            <span class="movieType">movie type${movie.}</span>
+                                            <span class="movieDuration">${data.Runtime}</span>
+                                            <span class="movieType">${data.Genre}</span>
                                             <button class="addBtn">add to watch</button>
                                         </div>
-                                        <p>plot${movie.}</p>
+                                        <p>${data.Plot}</p>
                                     </div>
                                 </div>`
-                                */
+                               
                         list.innerHTML = movieList
                     
                     }) 
