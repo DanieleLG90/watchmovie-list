@@ -79,7 +79,7 @@ header{
     align-items: center;
 }
 
-.list div{
+.startMsg{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,7 +90,7 @@ header{
     width: 30%;
 }
 
-.list div p{
+.startMsgP{
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -98,10 +98,32 @@ header{
 /*list with movie*/
 
 .movieCard{
+    border: 2px solid red;
     display: flex;
+    justify-content: start;
+    padding: 20px 5px;
+}
+
+.moviePoster{
+    height: 200px;
+    width: auto;
+    margin: auto 0;
+    border: 2px solid blue;
 }
 
 .movieInfo1,
 .movieInfo2{
     display: flex;
+    border: 2px solid green;
+    font-size: 1rem;
+}
+
+.movieTitle{
+    font-size: 1rem;
+}
+
+.plot{
+    font-size: 0.75rem;
+    color: blue;
+
 }

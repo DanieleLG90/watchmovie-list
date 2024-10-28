@@ -29,7 +29,7 @@ srcBtn.addEventListener('click', function(){
                         
                         movieList += `  
                                 <div class="movieCard">
-                                    <img class="moviePOster" src="${movie.Poster}" alt="movie Poster">
+                                    <img class="moviePoster" src="${movie.Poster}" alt="movie Poster">
                                     <div>
                                         <div class="movieInfo1">
                                             <h2 class="movieTitle">${movie.Title}</h2>
@@ -40,7 +40,7 @@ srcBtn.addEventListener('click', function(){
                                             <span class="movieType">${data.Genre}</span>
                                             <button class="addBtn">add to watch</button>
                                         </div>
-                                        <p>${data.Plot}</p>
+                                        <p class="plot">${data.Plot}</p>
                                     </div>
                                 </div>`
                                
