@@ -75,6 +75,7 @@ header{
 .list{
     height: 70%;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -95,3 +96,12 @@ header{
 }
 
 /*list with movie*/
+
+.movieCard{
+    display: flex;
+}
+
+.movieInfo1,
+.movieInfo2{
+    display: flex;
+}
