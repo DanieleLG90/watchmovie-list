@@ -105,10 +105,18 @@ header{
 }
 
 .moviePoster{
-    height: 120px;
+    height: 150px;
     width: auto;
     margin: auto 0;
     border: 2px solid blue;
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    border: 2px solid rgb(255, 0, 255);
 }
 
 .movieInfo1,
@@ -119,11 +127,17 @@ header{
 }
 
 .movieTitle{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+}
+
+.movieRate,
+.movieDuration,
+.movieType{
+    font-size: 0.6rem;
 }
 
 .plot{
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     color: blue;
 
 }
