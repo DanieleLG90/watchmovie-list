@@ -36,8 +36,10 @@ srcBtn.addEventListener('click', function(){
                                             <h3 class="movieRate">${data.imdbRating}</h3>
                                         </div>
                                         <div class="movieInfo2">
-                                            <span class="movieDuration">${data.Runtime}</span>
-                                            <span class="movieType">${data.Genre}</span>
+                                            <div class="movieStyleContainer">
+                                                <span class="movieDuration">${data.Runtime}</span>
+                                                <span class="movieType">${data.Genre}</span>
+                                            </div>
                                             <button class="addBtn">Watchlist</button>
                                         </div>
                                         <p class="plot">${data.Plot}</p>

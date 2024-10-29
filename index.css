@@ -112,24 +112,30 @@ header{
 }
 
 .infoContainer{
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    
+    gap: 8px;
     border: 2px solid rgb(255, 0, 255);
 }
 
-.movieInfo1,
 .movieInfo2{
     display: flex;
+    justify-content: space-between;
     border: 2px solid green;
-    font-size: 1rem;
+    
+}
+
+.movieInfo1,
+.movieStyleContainer{
+    display: flex;
+    flex-direction: column;
 }
 
 .movieTitle{
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
+
+
 
 .movieRate,
 .movieDuration,
