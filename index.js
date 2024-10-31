@@ -40,7 +40,7 @@ srcBtn.addEventListener('click', function(){
                                                 <span class="movieDuration">${data.Runtime}</span>
                                                 <span class="movieType">${data.Genre}</span>
                                             </div>
-                                            <button class="addBtn">Watchlist</button>
+                                            <button class="addBtn"><img class="addMovieImg" src="movies-add.svg" alt="">Watchlist</button>
                                         </div>
                                         <p class="plot">${data.Plot}</p>
                                     </div>
