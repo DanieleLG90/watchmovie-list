@@ -29,10 +29,10 @@ srcBtn.addEventListener('click', function(){
                         
                         movieList += `  
                                 <div class="movieCard">
-                                    <img class="moviePoster" src="${movie.Poster}" alt="movie Poster">
+                                    <img class="moviePoster" src="${data.Poster}" alt="movie Poster">
                                     <div class="infoContainer">
                                         <div class="movieInfo1">
-                                            <h2 class="movieTitle">${movie.Title}</h2>
+                                            <h2 class="movieTitle">${data.Title}</h2>
                                             <h3 class="movieRate">${data.imdbRating}</h3>
                                         </div>
                                         <div class="movieInfo2">
