@@ -55,4 +55,4 @@ srcBtn.addEventListener('click', function(){
     })
 })
 
-//creare un altro fetch, che lavora su ogni singolo titolo attraverso il Filter.
+
