@@ -16,8 +16,8 @@ srcBtn.addEventListener('click', function(){
         const movieListArray = data.Search
         
         if(data.Response === 'False'){
-            list.textContent = "No movie with this title. try again!"
-            //console.log("No movie with this title. try again!")
+            list.innerHTML = `<h3 class="noResultMsg">No movie with this title. try again!</h3>`
+        
         } else{
             //console.log(movieListArray)
             let movieList =''

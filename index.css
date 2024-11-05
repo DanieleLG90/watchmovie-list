@@ -96,6 +96,12 @@ header{
     font-weight: 500;
 }
 
+.noResultMsg{
+    margin: auto 0 ;
+    text-align: center;
+    color: rgb(122, 122, 122);
+}
+
 /*list with movie*/
 
 .movieCard{
