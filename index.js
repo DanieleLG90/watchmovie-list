@@ -36,7 +36,7 @@ srcBtn.addEventListener('click', function(){
                                                 <span class="movieDuration">${data.Runtime}</span>
                                                 <span class="movieType">${data.Genre}</span>
                                             </div>
-                                            <button onclick="ciao('${data.Title}')" class="addBtn"><img class="addMovieImg" src="movies-add.svg" alt="">Watchlist</button>
+                                            <button class="addBtn"><img class="addMovieImg" src="movies-add.svg" alt="">Watchlist</button>
                                         </div>
                                         <p class="plot">${data.Plot}</p>
                                     </div>
@@ -46,15 +46,10 @@ srcBtn.addEventListener('click', function(){
 
                     }) 
             })
-            
         }
     })
+ 
 })
-
-function ciao(movie){
-    console.log(movie)
-}
-
 
 
 
