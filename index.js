@@ -2,11 +2,7 @@ const titleImput = document.getElementById("titleImput")
 const srcBtn = document.getElementById("srcBtn")
 const list = document.getElementById("list")
 
-/*
-fetch ("http://www.omdbapi.com/?t=star+wars&type=movie&apikey=7a4561cc")
-    .then(res => res.json())
-    .then(data => console.log(data))
-*/
+
 
 srcBtn.addEventListener('click', function(){
     fetch (`https://www.omdbapi.com/?s=${titleImput.value}&type=movie&apikey=7a4561cc`)
@@ -25,7 +21,7 @@ srcBtn.addEventListener('click', function(){
                 fetch(`https://www.omdbapi.com/?t=${movie.Title}&type=movie&apikey=7a4561cc`)
                     .then(res => res.json())
                     .then(data =>{
-                        console.log(data)
+                        //console.log(data)
                         
                         movieList += `  
                                 <div class="movieCard">
@@ -40,22 +36,25 @@ srcBtn.addEventListener('click', function(){
                                                 <span class="movieDuration">${data.Runtime}</span>
                                                 <span class="movieType">${data.Genre}</span>
                                             </div>
-                                            <button class="addBtn"><img class="addMovieImg" src="movies-add.svg" alt="">Watchlist</button>
+                                            <button onclick="ciao('${data.Title}')" class="addBtn"><img class="addMovieImg" src="movies-add.svg" alt="">Watchlist</button>
                                         </div>
                                         <p class="plot">${data.Plot}</p>
                                     </div>
                                 </div>`
                                
                         list.innerHTML = movieList
-                    
+
                     }) 
             })
             
         }
     })
-
-
 })
+
+function ciao(movie){
+    console.log(movie)
+}
+
 
 
 
