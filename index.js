@@ -29,7 +29,7 @@ function displayMovie(movieListed){
         fetch(`https://www.omdbapi.com/?t=${movie.Title}&type=movie&apikey=7a4561cc`)
             .then(res => res.json())
             .then(data =>{
-                console.log(data)
+                //console.log(data)
                 
                 movieList += `  
                         <div class="movieCard">
@@ -59,43 +59,14 @@ function displayMovie(movieListed){
     }) 
   }
 
+ const movieTitleList = []
+
 list.addEventListener('click', function(e){
   if (e.target.classList.contains('addBtn')){
     console.log(e.target.dataset.movieTitle)
-    //const Title = e.target
+    const titleToAdd = e.target.dataset.movieTitle
+    movieTitleList.push(titleToAdd)
+    console.log(movieTitleList)
+    console.log(localStorage)
   }
 })
-/*
-function displayMovie(movieListed) {
-    let movieList = '';
-  
-    movieListed.forEach(movie => {
-      fetch(`https://www.omdbapi.com/?t=${movie.Title}&type=movie&apikey=7a4561cc`)
-        .then(res => res.json())
-        .then(data => {
-          movieList += `
-            <div class="movieCard">
-              <img class="moviePoster" src="${data.Poster}" alt="movie Poster">
-              <div class="infoContainer">
-                <button class="addBtn" data-movie-title="${data.Title}">
-                  <img class="addMovieImg" src="movies-add.svg" alt="">Watchlist
-                </button>
-                </div>
-            </div>
-          `;
-        });
-    });
-  
-    // Add event listener to the container element (replace 'list' with your container ID)
-    document.getElementById('list').addEventListener('click', (event) => {
-      if (event.target.classList.contains('addBtn')) {
-        const movieTitle = event.target.dataset.movieTitle;
-        myFunction(movieTitle);
-      }
-    });
-  }
-  
-  function myFunction(movie) {
-    console.log(movie);
-  }
-    */
