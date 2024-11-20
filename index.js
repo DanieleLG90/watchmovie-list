@@ -44,7 +44,9 @@ function displayMovie(movieListed){
                                         <span class="movieDuration">${data.Runtime}</span>
                                         <span class="movieType">${data.Genre}</span>
                                     </div>
-                                    <button class="addBtn" onclick="myFunction(${data.Title})" ><img class="addMovieImg" src="movies-add.svg" alt="">Watchlist</button>
+                                    <button class="addBtn" data-movie-title='${data.Title}' >
+                                      <img class="addMovieImg" src="movies-add.svg" alt="">Watchlist
+                                    </button>
                                 </div>
                                 <p class="plot">${data.Plot}</p>
                             </div>
@@ -55,11 +57,14 @@ function displayMovie(movieListed){
             }) 
             
     }) 
-}
-function myFunction(movie) {
-    console.log(movie)
-}
+  }
 
+list.addEventListener('click', function(e){
+  if (e.target.classList.contains('addBtn')){
+    console.log(e.target.dataset.movieTitle)
+    //const Title = e.target
+  }
+})
 /*
 function displayMovie(movieListed) {
     let movieList = '';
