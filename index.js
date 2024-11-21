@@ -67,15 +67,19 @@ if(!movieTitlesArray){
     movieTitlesArray = []
     localStorage.setItem('movieTitlesArray', JSON.stringify(movieTitlesArray))
 }
-
+// addeventlistener for the addbutton click
 list.addEventListener('click', function(e){
   if (e.target.classList.contains('addBtn')){
     console.log(e.target.dataset.movieTitle)
     let titleToAdd = e.target.dataset.movieTitle
+    addingMovieToArray(titleToAdd)
     console.log(movieTitlesArray)
   }
 })
-
+// functioin to push the title in the array and the array back in the localstorage
 function addingMovieToArray (movieT){
-
+    if(!movieTitlesArray.includes(movieT)){
+        movieTitlesArray.push(movieT)
+        localStorage.setItem('movieTitlesArray', JSON.stringify(movieTitlesArray))
+    }
 }
