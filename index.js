@@ -57,16 +57,25 @@ function displayMovie(movieListed){
             }) 
             
     }) 
-  }
+}
 
- const movieTitleList = []
+// function to create an array in the local storage, checking if already exist one.
+
+let movieTitlesArray = JSON.parse(localStorage.getItem('movieTitlesArray'))
+
+if(!movieTitlesArray){
+    movieTitlesArray = []
+    localStorage.setItem('movieTitlesArray', JSON.stringify(movieTitlesArray))
+}
 
 list.addEventListener('click', function(e){
   if (e.target.classList.contains('addBtn')){
     console.log(e.target.dataset.movieTitle)
-    const titleToAdd = e.target.dataset.movieTitle
-    movieTitleList.push(titleToAdd)
-    console.log(movieTitleList)
-    console.log(localStorage)
+    let titleToAdd = e.target.dataset.movieTitle
+    console.log(movieTitlesArray)
   }
 })
+
+function addingMovieToArray (movieT){
+
+}
