@@ -36,12 +36,13 @@ header{
     word-spacing: -12px;
 }
 
-.title li{
+.title a{
     align-self: center;
     list-style-type: none;
     margin-top: 20px;
     font-size: 1.2rem;
     word-spacing: -5px;
+    color:aliceblue;
 }
 
 .searchBar{
