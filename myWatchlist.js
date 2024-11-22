@@ -54,6 +54,13 @@ list.addEventListener('click', function(e){
         movieTitlesArray.splice(movieIndex, 1);
         localStorage.setItem('movieTitlesArray', JSON.stringify(movieTitlesArray))
         displayMovie()
+
+        if(movieTitlesArray.length == 0){
+            list.innerHTML = `
+            <div class="startMsg">
+                <p class="startMsgP">List is Empty</p>
+            </div>`
+        }
       
     }
 })
