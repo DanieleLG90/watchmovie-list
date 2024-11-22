@@ -77,6 +77,8 @@ function onArrayChanged() {
 function addElement(element) {
   myArray.push(element);
   // Simulazione di un evento personalizzato
+
+  aggiungere questo al button quando viene modificato l'array
   const event = new Event('arrayChanged');
   window.dispatchEvent(event);
 }
@@ -84,6 +86,5 @@ function addElement(element) {
 // Registra il listener per l'evento
 window.addEventListener('arrayChanged', onArrayChanged);
 
-// Aggiungi un elemento per testare
-addElement('nuovo elemento');
+
 */
