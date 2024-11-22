@@ -8,8 +8,8 @@ displayMovie()
 function displayMovie(){
     let movieList =''
 
-    movieTitlesArray.forEach(movieT =>{
-        fetch(`https://www.omdbapi.com/?t=${movieT.Title}&type=movie&apikey=7a4561cc`)
+    movieTitlesArray.forEach(movie =>{
+        fetch(`https://www.omdbapi.com/?t=${movie}&type=movie&apikey=7a4561cc`)
             .then(res => res.json())
             .then(data =>{
                 console.log(data)
@@ -28,7 +28,7 @@ function displayMovie(){
                                         <span class="movieType">${data.Genre}</span>
                                     </div>
                                     <button class="addBtn" data-movie-title='${data.Title}' >
-                                      <img class="addMovieImg" src="movies-add.svg" alt="">Watchlist
+                                      <img class="addMovieImg" src="movies-delete.svg" alt="">Remove
                                     </button>
                                 </div>
                                 <p class="plot">${data.Plot}</p>

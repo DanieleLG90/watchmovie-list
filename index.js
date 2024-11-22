@@ -8,7 +8,7 @@ srcBtn.addEventListener('click', function(){
     fetch (`https://www.omdbapi.com/?s=${titleImput.value}&type=movie&apikey=7a4561cc`)
     .then(res => res.json())
     .then(data => {
-
+        
         const movieListArray = data.Search
         
         if(data.Response === 'False'){
