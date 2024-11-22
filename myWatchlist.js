@@ -59,20 +59,24 @@ list.addEventListener('click', function(e){
 })
 
 /*
+const myArray = [];
 
-funzione per andare a selezionare ed eliminare il film selezionato.
-nella funzione andrà richiamata la funzione con il display dei film?
-
-const fruits = ['mela', 'banana', 'pera', 'arancia'];
-const fruitToRemove = 'pera';
-
-// Trova l'indice dell'elemento da rimuovere
-const index = fruits.indexOf(fruitToRemove);
-
-// Rimuovi l'elemento utilizzando splice()
-if (index !== -1) {
-    fruits.splice(index, 1);
+// Funzione che viene eseguita quando l'array viene modificato
+function onArrayChanged() {
+  console.log('L\'array è stato modificato:', myArray);
 }
 
-console.log(fruits); // Output: ['mela', 'banana', 'arancia']
+// Funzione per aggiungere un elemento all'array e inviare l'evento
+function addElement(element) {
+  myArray.push(element);
+  // Simulazione di un evento personalizzato
+  const event = new Event('arrayChanged');
+  window.dispatchEvent(event);
+}
+
+// Registra il listener per l'evento
+window.addEventListener('arrayChanged', onArrayChanged);
+
+// Aggiungi un elemento per testare
+addElement('nuovo elemento');
 */
