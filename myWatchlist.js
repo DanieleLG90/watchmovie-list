@@ -66,6 +66,10 @@ list.addEventListener('click', function(e){
 })
 
 /*
+
+thinking to add an event listener for everytime the array is modified.
+just in case the two pages (the search and the movielist) are open at the same time.
+
 const myArray = [];
 
 // Funzione che viene eseguita quando l'array viene modificato
