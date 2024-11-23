@@ -109,6 +109,8 @@ header{
     display: flex;
     justify-content: start;
     padding: 10px 3px;
+    margin: 0 2px;
+    border-bottom: 2px solid rgb(95, 95, 95);
 }
 
 .moviePoster{
@@ -138,6 +140,11 @@ header{
     border: 1px solid black;
     border-radius: 4px;
 
+}
+
+.addBtn:active{
+    background-color: black;
+    color: aliceblue;
 }
 
 .addMovieImg{
