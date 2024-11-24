@@ -14,7 +14,7 @@ body{
 header{
     height: 30%;
     background-color: aqua;
-    background-image: url('background.jpg');
+    background-image: url('file.jpg');
     background-size: cover;
 }
 
@@ -50,7 +50,6 @@ header{
     bottom: 18px;
     display: flex;
     justify-content: center;
-    /*width: 100%;*/
 }
 
 .searchBar input,
@@ -70,6 +69,13 @@ header{
     width: 25%;
     border-left: none;
     border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.searchBar button:active{
+    background-color: black;
+    color: aliceblue;
+    border: 2px solid aliceblue;
 }
 
 /*empty list*/
@@ -139,6 +145,7 @@ header{
     background: none;
     border: 1px solid black;
     border-radius: 4px;
+    cursor: pointer;
 
 }
 
@@ -173,4 +180,73 @@ header{
 
 .plot{
     font-size: 0.6rem;
+}
+
+@media screen and (min-width: 992px){
+    body{
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .searchBar input{
+        width: 55%;
+    }
+    .searchBar button{
+        width: 15%;
+    }
+
+    .list{
+        align-items: start;
+        padding: 40px;
+    }
+
+    .movieCard{
+        width: 100%;
+    }
+
+    .moviePoster{
+        height: 200px;
+    }
+
+    .infoContainer{
+        width: 100%;
+    }
+
+    .movieInfo1{
+        flex-direction: row;
+        margin-bottom: 1em;
+    }
+
+    .movieTitle{
+        font-size: 1.5rem;
+        margin-right: 20px;
+    }
+
+    .movieRate{
+        margin-top: auto;
+    }
+
+    .movieInfo2{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .movieStyleContainer{
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto 0;
+    }
+   
+    .movieRate,
+    .movieDuration,
+    .movieType,
+    .plot{
+        font-size: 1rem;
+    }
+
+    .plot{
+        margin: auto 0;
+    }
 }

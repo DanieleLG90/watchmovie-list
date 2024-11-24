@@ -41,8 +41,8 @@ function displayMovie(movieListed){
                                 </div>
                                 <div class="movieInfo2">
                                     <div class="movieStyleContainer">
-                                        <span class="movieDuration">${data.Runtime}</span>
-                                        <span class="movieType">${data.Genre}</span>
+                                        <p class="movieDuration">${data.Runtime}</p>
+                                        <p class="movieType">${data.Genre}</p>
                                     </div>
                                     <button class="addBtn" data-movie-title='${data.Title}' >
                                       <img class="addMovieImg" src="movies-add.svg" alt="">Watchlist
